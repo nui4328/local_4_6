@@ -414,20 +414,19 @@ void fw_to_box(int ml, int mr, float kp, int tim , int ofset)
 }
 void circle()
 {
-  fline_2sensor(30, 30, 0.7, 0, "3:4", "a0", 'p', 10);
-  do {
-    Motor(40, -10);
-  } while (mcp_f(4) > md_mcp_f(4));
+  fline_2sensor(30, 30, 0.7, 0, "3:4", "a0", 'p', 0);delay(30);
+  do {Motor(40, -10);} while (mcp_f(3) > md_mcp_f(3));
   Motor(-40, 10); delay(20);
-  Motor(0, 0); delay(100);
 
-  fline_2sensor(30, 30, 0.7, 400, "3:4", "a7", 'p', 0);
+  fline_2sensor(32, 32, 0.5, 0, "3:4", "a7", 'p', 0);
+  do {Motor(-20, 40);} while (mcp_f(4) > md_mcp_f(4));
 
-  fline_2sensor(30, 30, 0.7, 0, "3:4", "a7", 'p', 10);
+  fline_2sensor(32, 32, 0.7, 0, "3:4", "a7", 'p', 10);
   fline(20, 20, 0.1, 100, 'n', 'r', 40, "a4", 10);
 
-  fline_2sensor(30, 30, 0.7, 400, "3:4", "a7", 'p', 0);
-  fline_2sensor(30, 30, 0.7, 0, "3:4", "a7", 'p', 5);
+  fline_2sensor(32, 32, 0.7, 0, "3:4", "a7", 'p', 0);
+  do {Motor(-20, 40);} while (mcp_f(4) > md_mcp_f(4));
+  fline_2sensor(30, 30, 0.7, 0, "3:4", "a7", 'p', 2);
   fline(20, 20, 0.1, 50, 'n', 'r', 40, "a4", 20);
   if (mcp_f(2) < md_mcp_f(2) && mcp_f(4) > md_mcp_f(4))
   {

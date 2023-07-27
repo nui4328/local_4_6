@@ -155,7 +155,7 @@ void box_7()
      Motor(-40, 10); delay(20);
      Motor(0, 0); delay(100);
 
-     fline_2sensor(30,30,0.7,0,"3:4","a7",'p',20);
+     fline_2sensor(25,25,0.7,0,"3:4","a7",'p',20);
      fline(20,25, 0.1, 100, 'n', 'r',40, "a4", 30);  
      fw_to_box(40, 40, 0.3, 100 , 10);
      servo_mission();
@@ -179,7 +179,7 @@ void box_8()
      Motor(10,-40); delay(20);
      Motor(0, 0); delay(100);
 
-     fline_2sensor(30,30,0.7,0,"3:4","a0",'p',20);
+     fline_2sensor(25,25,0.7,0,"3:4","a0",'p',20);
      fline(25,20, 0.1, 100, 'n', 'l',40, "a3", 30);  
      fw_to_box(40, 40, 0.3, 100 , 10);
      servo_mission();
@@ -198,27 +198,28 @@ void box_9()
      fline(50,50,0.3,0,'c','p',45, "a5", 25);  
      fline(40,40,0.5,300,'n','s',45, "a5", 1);        
      fline_2sensor(30,30,0.2,0,"3:4","27",'p',0);
-     fline_2sensor(30,30,0.7,0,"3:4","a0",'p',20);
-     do{Motor(40,-10);}while(mcp_f(4) > md_mcp_f(4));
-     Motor(-40, 10); delay(20);
-     Motor(0, 0); delay(100);
 
-     fline_2sensor(30,30,0.7,0,"3:4","a7",'p',0);
-     do{Motor(-1,30);}while(mcp_f(4) > md_mcp_f(4));
-     fline_2sensor(30,30,0.7,0,"3:4","a7",'p',0);
+     fline_2sensor(30, 30, 0.7, 0, "3:4", "a0", 'p', 0);delay(30);
+     do {Motor(40, -10);} while (mcp_f(3) > md_mcp_f(3));
+     Motor(-40, 10); delay(20);
+  
+     fline_2sensor(32, 32, 0.5, 0, "3:4", "a7", 'p', 0);
+     do {Motor(-20, 40);} while (mcp_f(4) > md_mcp_f(4));
+     
+     fline_2sensor(25,25,0.7,0,"3:4","a7",'p',0);
      fline(20,20, 0.1, 100, 'n', 'r',40, "a4", 20); 
 
-     fline_2sensor(30,30,0.7,0,"3:4","a7",'p',20);
+     fline_2sensor(25,25,0.7,0,"3:4","a7",'p',20);
      fline(20,25, 0.1, 100, 'n', 'r',40, "a4", 30);  
      fw_to_box(40, 40, 0.3, 100 , 10);
      
      servo_mission();
      
      bline(30,30, 0.3, 0, 'c', 'r',40, "a4", 20); 
-     fline_2sensor(30,30,0.7,0,"3:4","a0",'p',0);
+     fline_2sensor(25,25,0.7,0,"3:4","a0",'p',0);
      fline(20,20, 0.1, 50, 'n', 'l',40, "a3", 20);
           
-     fline_2sensor(30,30,0.7,0,"3:4","a0",'p',0);
+     fline_2sensor(25,25,0.7,0,"3:4","a0",'p',0);
      do{Motor(30,-5);}while(mcp_f(4) > md_mcp_f(4));
      fline_2sensor(30,30,0.7,0,"3:4","a0",'p',0);
      fline(20,20, 0.1, 50, 'n', 'l',40, "a3", 20);  
@@ -237,29 +238,30 @@ void box_10()
      fline(50,50,0.3,0,'c','p',45, "a5", 25);  
      fline(40,40,0.5,300,'n','s',45, "a5", 1);        
      fline_2sensor(30,30,0.2,0,"3:4","27",'p',0);
-     fline_2sensor(30,30,0.7,0,"3:4","a0",'p',0);
+     
+     fline_2sensor(30,30,0.7,0,"3:4","a0",'p',0);delay(30);
      do{Motor(-10,40);}while(mcp_f(3) > md_mcp_f(3));
      Motor(10,-40); delay(20);
      Motor(0, 0); delay(100);
 
-     fline_2sensor(30,30,0.7,0,"3:4","a0",'p',0);
-     do{Motor(30,-5);}while(mcp_f(4) > md_mcp_f(4));
-     fline_2sensor(30,30,0.7,0,"3:4","a0",'p',0);
+     fline_2sensor(25,25,0.7,0,"3:4","a0",'p',0);
+     do{Motor(40,-20);}while(mcp_f(4) > md_mcp_f(4));
+     fline_2sensor(25,25,0.7,0,"3:4","a0",'p',0);
      fline(20,20, 0.1, 100, 'n', 'l',40, "a3", 20); 
 
-     fline_2sensor(30,30,0.7,0,"3:4","a0",'p',0);
+     fline_2sensor(25,25,0.7,0,"3:4","a0",'p',0);
      fline(25,20, 0.1, 100, 'n', 'l',40, "a3", 30);  
      fw_to_box(40, 40, 0.3, 100 , 10);
      
      servo_mission();
      
      bline(30,30, 0.3, 0, 'c', 'l',40, "a3", 20); 
-     fline_2sensor(30,30,0.7,0,"3:4","a7",'p',0);
+     fline_2sensor(25,25,0.7,0,"3:4","a7",'p',0);
      fline(20,20, 0.1, 50, 'n', 'r',40, "a4", 20);
           
-     fline_2sensor(30,30,0.7,0,"3:4","a7",'p',0);
+     fline_2sensor(25,25,0.7,0,"3:4","a7",'p',0);
      do{Motor(-5,30);}while(mcp_f(3) > md_mcp_f(3));
-     fline_2sensor(30,30,0.7,0,"3:4","a7",'p',0);
+     fline_2sensor(25,25,0.7,0,"3:4","a7",'p',0);
      fline(20,20, 0.1, 50, 'n', 'r',40, "a4", 20);  
 
      fw_a3_a4(40, 40, 0.3, 0); 

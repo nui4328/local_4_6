@@ -107,8 +107,8 @@ void stR_can1_to_MD()
       }
       
     fw_2sensor(30, 30, 0.3, 0, "4:5","b7", 20);  
-    do{Motor(20,20);}while(mcp_b(7) < md_mcp_b(7));delay(50);       
-    fline(0,0,0.5,10,'n','r',30, "a4", 20);
+    do{Motor(20,20);}while(mcp_b(7) < md_mcp_b(7));delay(60);       
+    fline(0,0,0.5,10,'n','r',40, "a3", 10);
     slow_servo_down();
     fw_2sensor(20, 20, 0.3, 100, "3:4","26", 20);
            
@@ -136,7 +136,7 @@ void stR_can1_to_MD()
       Motor(-20, -20); delay(20);
       Motor(0, 0); delay(100);
             
-      bline(20,20,0.3, 0, 'c', 'l',40, "a2", 20);
+      bline(20,20,0.3, 0, 'c', 'l',40, "b4", 20);
       do{Motor(25,25);}while(mcp_b(0) > md_mcp_b(0));delay(10);
       do{Motor(25,25);}while(mcp_b(0) < md_mcp_b(0));delay(20);
       Motor(-30, -30); delay(20);
@@ -284,8 +284,8 @@ void stR_can2_to_MD()
       }
       
     fw_2sensor(30, 30, 0.3, 0, "2:3","b0", 20);  
-    do{Motor(20,20);}while(mcp_b(0) < md_mcp_b(0));delay(50);       
-    fline(0,0,0.5,10,'n','l',30, "a3", 20);
+    do{Motor(20,20);}while(mcp_b(0) < md_mcp_b(0));delay(60);       
+    fline(0,0,0.5,10,'n','l',40, "a4", 10);
     slow_servo_down();
     fw_2sensor(20, 20, 0.3, 100, "3:4","27", 20);
            
@@ -312,7 +312,7 @@ void stR_can2_to_MD()
      Motor(-20, -20); delay(20);
      Motor(0, 0); delay(100);
             
-      bline(20,20,0.3, 0, 'c', 'r',40, "a5", 20);
+      bline(20,20,0.3, 0, 'c', 'r',40, "b3", 20);
       do{Motor(25,25);}while(mcp_b(7) > md_mcp_b(7));delay(10);
       do{Motor(25,25);}while(mcp_b(7) < md_mcp_b(7));delay(20);
       Motor(-30, -30); delay(20);
